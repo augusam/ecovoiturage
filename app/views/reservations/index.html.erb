@@ -1,0 +1,13 @@
+<!-- app/views/reservations/index.html.erb -->
+<h2>Liste des Réservations</h2>
+
+<ul>
+  <% @reservations.each do |reservation| %>
+    <li>
+      <strong>Utilisateur:</strong> <%= reservation.user.username %><br>
+      <strong>Trajet:</strong> <%= reservation.trip.departure_location %> à <%= reservation.trip.destination %><br>
+      <strong>Nombre de places:</strong> <%= reservation.seat_count %><br>
+      <%= link_to "Voir les détails", reservation_path(reservation) %>
+    </li>
+  <% end %>
+</ul>

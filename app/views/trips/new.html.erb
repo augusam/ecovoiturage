@@ -1,0 +1,18 @@
+<!-- app/views/trips/new.html.erb -->
+<h2>Créer un Nouveau Trajet</h2>
+
+<%= form_for @trip do |f| %>
+  <%= f.label :departure_location %>
+  <%= f.text_field :departure_location, required: true %>
+
+  <%= f.label :destination %>
+  <%= f.text_field :destination, required: true %>
+
+  <%= f.label :departure_time %>
+  <%= f.datetime_local_field :departure_time, required: true %>
+
+  <%= f.label :available_seats %>
+  <%= f.number_field :available_seats, required: true %>
+
+  <%= f.submit "Créer le Trajet" %>
+<% end %>

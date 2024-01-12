@@ -1,0 +1,13 @@
+<!-- app/views/trips/index.html.erb -->
+<h2>Liste des Trajets Disponibles</h2>
+
+<ul>
+  <% @trips.each do |trip| %>
+    <li>
+      <strong>Départ:</strong> <%= trip.departure_location %><br>
+      <strong>Destination:</strong> <%= trip.destination %><br>
+      <strong>Départ à:</strong> <%= trip.departure_time %><br>
+      <%= link_to "Réserver ce trajet", new_reservation_path(trip_id: trip.id) %>
+    </li>
+  <% end %>
+</ul>

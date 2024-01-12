@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  departure_location: MyString
+  arrival_location: MyString
+  departure_time: 2024-01-12 13:59:05
+  seats_available: 1
+  driver_id: 1
+
+two:
+  departure_location: MyString
+  arrival_location: MyString
+  departure_time: 2024-01-12 13:59:05
+  seats_available: 1
+  driver_id: 1
